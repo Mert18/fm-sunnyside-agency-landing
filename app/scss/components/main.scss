@@ -1,0 +1,156 @@
+@use 'util';
+
+.main{
+ // hello 
+}
+
+.promises{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.promise{
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+#transform-text{
+  grid-column: 1 / 7;
+
+}
+.promise-text{
+  width: 60%;
+  justify-self: center;
+  align-self: center;
+  font-weight: 600;
+}
+
+.promise-text h2 {
+  font-family: var(--font-fraunces);
+  font-size: 2.3rem;
+}
+.promise-text p{
+  color: var(--very-dark-grayish-blue);
+  line-height: 26px;
+}
+.promise-text a{
+  font-family: var(--font-fraunces);
+  color: black;
+  border-bottom: 4px solid var(--yellow);
+  padding: 0rem .4rem;
+}
+#transform{
+  grid-column: 7 / -1;
+}
+#stand{
+  grid-column: 1 / 7;
+}
+#stand-text{
+  grid-column: 7 / -1;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+}
+#cherry{
+  background: url("/images/desktop/image-graphic-design.jpg");
+}
+#orange{
+  background: url("/images/desktop/image-photography.jpg");
+}
+
+.service {
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1;
+  position: relative;
+}
+.service-text{
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+}
+.service-text h3 {
+  font-family: var(--font-fraunces);
+  font-size: 1.8rem;
+}
+.service-text p{
+  color: var(--very-dark-grayish-blue);
+  font-size: 1rem;
+}
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  margin-top: 6rem;
+}
+.clients-title{
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: var(--font-fraunces);
+  letter-spacing: 7px;
+  color: var(--very-dark-grayish-blue);
+  font-size: 1.2rem;
+}
+
+.clients-clients{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.client{
+  text-align: center;
+  padding: 3rem;
+  color: var(--very-dark-grayish-blue);
+}
+.client img{
+  border-radius: 50%;
+  margin-bottom: 1rem;
+
+}
+.client-info{
+  margin-top: 3rem;
+}
+.client-info h3{
+  font-family: var(--font-fraunces);
+  color: black;
+}
+.client-info p{
+  color: var(--very-dark-grayish-blue);
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  max-width: 100vw;
+}
+.images-image img{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--dark-moderate-cyan);
+  color: var(--dark-blue);
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title{
+  padding: 2rem;
+}
