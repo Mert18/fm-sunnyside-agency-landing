@@ -8,20 +8,16 @@
 
 .promise{
   grid-column: 1 / -1;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
-#transform-text{
-  grid-column: 1 / 7;
 
-}
 .promise-text{
   width: 60%;
   justify-self: center;
   align-self: center;
   font-weight: 600;
-
 }
 
 .promise-text h1 {
@@ -31,6 +27,48 @@
 .promise-text p{
   color: var(--very-dark-grayish-blue);
   line-height: 26px;
+}
+
+#transform{
+  grid-column: 7 / -1;
+  grid-row: 1 / -1;
+
+}
+#transform-text{
+  grid-column: 1 / 7;
+  grid-row: 1 / -1;
+
+}
+#stand{
+  grid-column: 1 / 7;
+  grid-row: 1 / -1;
+}
+#stand-text{
+  grid-column: 7 / -1;
+  grid-row: 1 / -1;
+}
+#stand-text a{
+  font-family: var(--font-fraunces);
+  color: black;
+  padding: 0rem .4rem;
+  border-radius: 3px;
+  --d: 100%;
+
+  background: 
+      linear-gradient(var(--soft-red2) 0 0) 
+      0 100% /var(--d, 0) 7px 
+    no-repeat;
+  transition:0.5s;
+}
+
+#stand-text a:hover {
+  --d:0;
+  background: 
+      linear-gradient(var(--soft-red) 0 0) 
+      0 100% /var(--d, 0) 7px 
+    no-repeat;
+  transition:0.5s;
+  --d:100%
 }
 
 #transform-text a{
@@ -57,41 +95,6 @@
   --d:100%
 }
 
-#stand-text a{
-  font-family: var(--font-fraunces);
-  color: black;
-  padding: 0rem .4rem;
-  border-radius: 3px;
-  --d: 100%;
-
-  background: 
-      linear-gradient(var(--soft-red2) 0 0) 
-      0 100% /var(--d, 0) 7px 
-    no-repeat;
-  transition:0.5s;
-}
-
-#stand-text a:hover {
-  --d:0;
-  background: 
-      linear-gradient(var(--soft-red) 0 0) 
-      0 100% /var(--d, 0) 7px 
-    no-repeat;
-  transition:0.5s;
-  --d:100%
-}
-
-
-#transform{
-  grid-column: 7 / -1;
-}
-#stand{
-  grid-column: 1 / 7;
-}
-#stand-text{
-  grid-column: 7 / -1;
-}
-
 .services {
   display: flex;
   justify-content: center;
@@ -99,6 +102,9 @@
 }
 #cherry{
   background: url("/images/desktop/image-graphic-design.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #cherry h3{
   color: var(--dark-desaturated-cyan);
@@ -108,13 +114,15 @@
 }
 #orange{
   background: url("/images/desktop/image-photography.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #orange{
   color: var(--dark-blue);
 }
 
 .service {
-  background-size: cover;
   background-repeat: no-repeat;
   flex: 1;
   position: relative;
@@ -223,4 +231,58 @@
 }
 .footer-links ul li{
   padding: .9rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  #transform-text{
+    grid-column: 1 / -1;
+  grid-row: 2 / -1;
+
+  }
+  #transform{
+    grid-column: 1 /-1;
+  grid-row: 1 / 2;
+
+  }
+
+  #stand-text{
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+
+  }
+  #stand{
+    grid-column: 1 /-1;
+    grid-row: 1 / 2;
+  }
+
+  .services{
+    flex-direction: column;
+    height: 200vh;
+    }
+
+  #cherry{
+    height: 50vh
+  }
+
+  .clients-clients{
+    flex-direction: column;
+  }
+
+  .images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .promise-text {
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .promise-text h1{
+    font-size: 2rem;
+  }
+  .promise{
+    margin-bottom: 2rem;
+  }
 }

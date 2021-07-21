@@ -1,2 +1,2 @@
-"use strict";console.log("JS is working.");
+"use strict";var hamburgerLines=document.querySelector(".header-nav-hamburger-hamb"),hamburgerMenu=document.querySelector(".hamburger-menu");hamburgerLines.addEventListener("click",(function(){"block"===hamburgerMenu.style.display?hamburgerMenu.style.display="none":hamburgerMenu.style.display="block"}));
 //# sourceMappingURL=script.js.map
