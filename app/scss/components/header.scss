@@ -33,7 +33,13 @@
   border-radius: 2rem;
   font-family: var(--font-fraunces);
   font-size: 1rem;
+  transition: all .5s;
 
+}
+.header-nav-nav-bright:hover{
+  color: white;
+  background-color: rgba(255, 255, 255, 0.26);
+  transition: all .5s;
 }
 
 .header-title{
@@ -46,7 +52,19 @@
   color: white;
 }
 .header-arrow{
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin-top: 3rem;
+  animation: MoveUpDown 4s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 40px;
+  }
 }
